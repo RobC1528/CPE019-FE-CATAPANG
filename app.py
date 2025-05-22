@@ -32,6 +32,6 @@ if uploaded_file is not None:
     try:
         prediction = model.predict(img_array)
         predicted_class = class_names[np.argmax(prediction)]
-        st.markdown(f"### redicted Class: **{predicted_class.upper()}**")
+        st.markdown(f"### predicted Class: **{predicted_class.upper()}**")
     except Exception as e:
         st.error(f"Prediction failed: {e}")
